@@ -6,40 +6,31 @@
 package entity;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *
- * @author user
+ * @author sillamae kutsekool
  */
 public class Reader implements Serializable{
-    private Long id;
-    private String firstname;
+    private String name;
     private String lastname;
     private String phone;
 
     public Reader() {
     }
 
-    public Reader(String firstname, String lastname, String phone) {
-        this.firstname = firstname;
+    public Reader(String name, String lastname, String phone) {
+        this.name = name;
         this.lastname = lastname;
         this.phone = phone;
     }
-    
-    public Long getId() {
-        return id;
+
+    public String getName() {
+        return name;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getLastname() {
@@ -60,45 +51,12 @@ public class Reader implements Serializable{
 
     @Override
     public String toString() {
-        return "Reader{" + "firstname=" + firstname + ", lastname=" + lastname + ", phone=" + phone + '}';
+        return "Reader{" 
+                + "name=" + name 
+                + ", lastname=" + lastname 
+                + ", phone=" + phone 
+                + '}';
     }
-
-    
-    public int hashCode() {
-        int hash = 5;
-        hash = 17 * hash + Objects.hashCode(this.id);
-        hash = 17 * hash + Objects.hashCode(this.firstname);
-        hash = 17 * hash + Objects.hashCode(this.lastname);
-        hash = 17 * hash + Objects.hashCode(this.phone);
-        return hash;
-    }
-    
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Reader other = (Reader) obj;
-        if (!Objects.equals(this.firstname, other.firstname)) {
-            return false;
-        }
-        if (!Objects.equals(this.lastname, other.lastname)) {
-            return false;
-        }
-        if (!Objects.equals(this.phone, other.phone)) {
-            return false;
-        }
-        if (!Objects.equals(this.id, other.id)) {
-            return false;
-        }
-        return true;
-    }
-
-    
-    
+      
+            
 }

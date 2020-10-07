@@ -5,15 +5,17 @@
  */
 package entity;
 
+import java.io.Serializable;
+
 /**
  *
- * @author user
+ * @author sillamae kutsekool
  */
-public class Book {
+public class Book implements Serializable{
     private String name;
     private String author;
     private Integer publishedYear;
-   
+
     public Book() {
     }
 
@@ -49,13 +51,12 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{"
-                + "name=" + name
-                + ", author=" + author
-                + ", publishedYear=" + publishedYear
+        return "Book{" 
+                + "name=" + name 
+                + ", author=" + author 
+                + ", publishedYear=" + publishedYear 
                 + '}';
     }
-   
-   
-   
+    
+    
 }
